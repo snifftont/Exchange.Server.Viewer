@@ -1,0 +1,138 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="mailexchange.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+	<title></title>
+	<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+	<meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="~/Styles/style.css" title="style" />
+  <script type="text/javascript" src="../scripts/scriptLib.js"></script>
+	<script type="text/javascript" src="../scripts/common.js"> </script>
+    <script type="text/javascript" >
+
+        var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+        var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+        function getthedate() {
+            var mydate = new Date()
+            var year = mydate.getYear()
+            if (year < 1000)
+                year += 1900
+            var day = mydate.getDay()
+            var month = mydate.getMonth()
+            var daym = mydate.getDate()
+            if (daym < 10)
+                daym = "0" + daym
+            var hours = mydate.getHours()
+            var minutes = mydate.getMinutes()
+            var seconds = mydate.getSeconds()
+            var dn = "AM"
+            if (hours >= 12)
+                dn = "PM"
+            if (hours > 12) {
+                hours = hours - 12
+            }
+            if (hours == 0)
+                hours = 12
+            if (minutes <= 9)
+                minutes = "0" + minutes
+            if (seconds <= 9)
+                seconds = "0" + seconds
+            //change font size here
+            var cdate = "<small><font color='000000' face='Arial'><b>" + dayarray[day] + ", " + montharray[month] + " " + daym + ", " + year + " " + hours + ":" + minutes + ":" + seconds + " " + dn
++ "</b></font></small>"
+            if (document.all)
+                document.all.clock.innerHTML = cdate
+            else if (document.getElementById)
+                document.getElementById("clock").innerHTML = cdate
+            else
+                document.write(cdate)
+        }
+        if (!document.all && !document.getElementById)
+            getthedate()
+        function goforit() {
+            if (document.all || document.getElementById)
+                setInterval("getthedate()", 1000)
+        }
+
+</script>
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body onload="goforit()">
+	
+	<form id="Form1" runat="server">
+  <div id="main">
+  <div id="header">
+   
+      <div id="logo">
+        <div id="logo_text" style="float:left;">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h3 style="font-family:Arial Narrow; text-decoration:none; padding-top:30px; font-size:300%;"><a href="default.aspx?id=ah%y2a"><span class="logo_colour"><asp:Label ID="lblpool_title" Text="Exchange Viewer" runat="server" Font-Bold="True" 
+              ForeColor="White"></asp:Label></span></a></h3>
+          
+          </div>
+          <div style="float:right; width:67%;">
+       
+                <div id="status" style="float:left; " class="noUsername" >
+          
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <AnonymousTemplate>
+                        You are not logged In &nbsp; 
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome 
+                        <a href="/Account/myaccount.aspx" style="text-decoration:none;">
+                        <asp:LoginName ID="LoginName1" runat="server" />&nbsp; 
+                        </a>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                <asp:Label ID="lblzone" runat="server" Text="" ForeColor="Black"></asp:Label>
+                :<span id="clock"></span>
+                </div>
+                 
+	
+        <div style="float:right; width:auto;">
+
+               <asp:LoginStatus ID="LoginStatus1" runat="server"  LogoutAction="RedirectToLoginPage" ForeColor="White" />
+
+			</div>
+          <div style="float:right; width:468px; height:60px;">
+              
+          </div>
+          </div>
+      
+      </div>
+      
+            
+      
+			
+        <div id="menubar">
+        <ul id="menu">
+    
+          <li><a href="/default.aspx?id=ah%y2a">Home</a></li>
+          <li><a href="/About.aspx">About</a></li>
+          <li><a href="/EmailViewer.aspx">Email Viewer</a></li>
+          <li><a href="/contactus.aspx">Contact Us</a></li>
+          <li><a href="/help.aspx">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">   
+   
+     <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+       <a href="/default.aspx">Home</a> | <a href="/terms.aspx">Terms and Conditions</a> | <a href="/contactus.aspx">Contact Us</a> | <a href="/help.aspx">Help</a> 
+
+    </div>
+	</div>
+<div style="text-align: center; font-size: 0.75em;"><a href="#">Copyright &copy; Email Exchange Viewer</a>.</div>
+</form>
+</body>
+</html>

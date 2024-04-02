@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "mailexchange", "mailexchange.vbproj", "{6E67419F-5A02-47DE-B259-30CA5D86E5A7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ftp_spam_soft", "..\ftp_spam_soft\ftp_spam_soft.vbproj", "{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "emailService", "..\emailService\emailService.csproj", "{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "emailSetup", "emailSetup\emailSetup.vdproj", "{9820C820-63A0-4AB6-AEA7-98E5BBED7545}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6E67419F-5A02-47DE-B259-30CA5D86E5A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Debug|x86.ActiveCfg = Debug|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Debug|x86.Build.0 = Debug|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Release|Any CPU.ActiveCfg = Release|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Release|Mixed Platforms.Build.0 = Release|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Release|x86.ActiveCfg = Release|x86
+		{86C5468A-634F-4CB0-BDEB-1D2F927D3BD8}.Release|x86.Build.0 = Release|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Debug|x86.ActiveCfg = Debug|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Debug|x86.Build.0 = Debug|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Release|Any CPU.ActiveCfg = Release|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Release|Mixed Platforms.Build.0 = Release|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Release|x86.ActiveCfg = Release|x86
+		{8A5A0FF9-28F9-49DF-A4F2-D0F7375DA710}.Release|x86.Build.0 = Release|x86
+		{9820C820-63A0-4AB6-AEA7-98E5BBED7545}.Debug|Any CPU.ActiveCfg = Debug
+		{9820C820-63A0-4AB6-AEA7-98E5BBED7545}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{9820C820-63A0-4AB6-AEA7-98E5BBED7545}.Debug|x86.ActiveCfg = Debug
+		{9820C820-63A0-4AB6-AEA7-98E5BBED7545}.Release|Any CPU.ActiveCfg = Release
+		{9820C820-63A0-4AB6-AEA7-98E5BBED7545}.Release|Mixed Platforms.ActiveCfg = Release
+		{9820C820-63A0-4AB6-AEA7-98E5BBED7545}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
